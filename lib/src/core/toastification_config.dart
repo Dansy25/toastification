@@ -7,8 +7,7 @@ const _itemAnimationDuration = Duration(milliseconds: 600);
 const _defaultWidth = 400.0;
 const _defaultClipBehavior = Clip.none;
 
-typedef ToastificationMarginBuilder = EdgeInsetsGeometry Function(
-    BuildContext context, AlignmentGeometry alignment);
+typedef ToastificationMarginBuilder = EdgeInsetsGeometry Function(BuildContext context, AlignmentGeometry alignment);
 
 /// you can use [ToastificationConfig] class to change default values of [Toastification]
 ///
@@ -69,8 +68,7 @@ class ToastificationConfig extends Equatable {
       animationDuration: animationDuration ?? this.animationDuration,
       animationBuilder: animationBuilder ?? this.animationBuilder,
       marginBuilder: marginBuilder ?? this.marginBuilder,
-      applyMediaQueryViewInsets:
-          applyMediaQueryViewInsets ?? this.applyMediaQueryViewInsets,
+      applyMediaQueryViewInsets: applyMediaQueryViewInsets ?? this.applyMediaQueryViewInsets,
     );
   }
 

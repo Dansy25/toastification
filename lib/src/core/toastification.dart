@@ -145,8 +145,7 @@ class Toastification {
 
     direction ??= TextDirection.ltr;
 
-    final effectiveAlignment =
-        (alignment ?? config.alignment).resolve(direction);
+    final effectiveAlignment = (alignment ?? config.alignment).resolve(direction);
 
     final manager = _managers.putIfAbsent(
       effectiveAlignment,

@@ -96,8 +96,7 @@ class ToastificationApp extends ConsumerWidget {
 }
 
 class Routes {
-  static Route<T> fadeThrough<T>(RouteSettings settings, WidgetBuilder page,
-      {int duration = 300}) {
+  static Route<T> fadeThrough<T>(RouteSettings settings, WidgetBuilder page, {int duration = 300}) {
     return PageRouteBuilder<T>(
       settings: settings,
       transitionDuration: Duration(milliseconds: duration),

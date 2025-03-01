@@ -24,16 +24,12 @@ class FlatStyle extends BuiltInStyle {
 
   @override
   Color backgroundColor(BuildContext context) {
-    return Theme.of(context).brightness == Brightness.light
-        ? const Color(0xffFfffff)
-        : const Color(0xff2B2B2B);
+    return Theme.of(context).brightness == Brightness.light ? const Color(0xffFfffff) : const Color(0xff2B2B2B);
   }
 
   @override
   Color foregroundColor(BuildContext context) {
-    return Theme.of(context).brightness == Brightness.light
-        ? Colors.black
-        : Colors.white;
+    return Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white;
   }
 
   @override

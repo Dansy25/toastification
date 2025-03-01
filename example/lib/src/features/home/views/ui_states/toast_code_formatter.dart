@@ -24,21 +24,17 @@ class ToastCodeFormatter {
     }
 
     if (toastDetail.description != null) {
-      code.writeln(
-          '\tdescription: Text("${(toastDetail.description as Text).data}"),');
+      code.writeln('\tdescription: Text("${(toastDetail.description as Text).data}"),');
     }
 
     code.writeln('\talignment: ${toastDetail.alignment},');
 
-    if (toastDetail.autoCloseDuration != null &&
-        toastDetail.autoCloseDuration!.inMilliseconds >= 500) {
+    if (toastDetail.autoCloseDuration != null && toastDetail.autoCloseDuration!.inMilliseconds >= 500) {
       final duration = toastDetail.autoCloseDuration;
 
       final seconds = duration!.inSeconds;
 
-      final milliseconds = seconds > 0
-          ? duration.inMilliseconds - (seconds * 1000)
-          : duration.inMilliseconds;
+      final milliseconds = seconds > 0 ? duration.inMilliseconds - (seconds * 1000) : duration.inMilliseconds;
 
       code.write('\tautoCloseDuration: const Duration(');
 
@@ -53,8 +49,7 @@ class ToastCodeFormatter {
     }
 
     if (toastDetail.animationType != const BounceAnimationType()) {
-      code.writeln(
-          '\tanimationBuilder: ${toastDetail.animationType.buildCode()},');
+      code.writeln('\tanimationBuilder: ${toastDetail.animationType.buildCode()},');
     }
 
     if (toastDetail.primaryColor != null) {

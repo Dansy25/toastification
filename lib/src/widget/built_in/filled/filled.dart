@@ -79,8 +79,7 @@ class FilledToastWidget extends StatelessWidget {
 
     final showCloseButton = this.showCloseButton ?? true;
 
-    final borderRadius =
-        this.borderRadius ?? defaultStyle.borderRadius(context);
+    final borderRadius = this.borderRadius ?? defaultStyle.borderRadius(context);
 
     final borderSide = this.borderSide ?? defaultStyle.borderSide(context);
 
@@ -154,8 +153,7 @@ class FilledToastWidget extends StatelessWidget {
             showCloseButton: showCloseButton,
             onCloseTap: onCloseTap,
             icon: defaultStyle.closeIcon(context),
-            iconColor: foregroundColor?.withOpacity(.6) ??
-                defaultStyle.closeIconColor(context),
+            iconColor: foregroundColor?.withOpacity(.6) ?? defaultStyle.closeIconColor(context),
           ),
         ],
       ),

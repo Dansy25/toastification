@@ -33,8 +33,7 @@ mixin _$ToastDetail {
   Duration? get autoCloseDuration => throw _privateConstructorUsedError;
   Duration? get animationDuration => throw _privateConstructorUsedError;
   AnimationType get animationType => throw _privateConstructorUsedError;
-  CloseButtonShowType get closeButtonShowType =>
-      throw _privateConstructorUsedError;
+  CloseButtonShowType get closeButtonShowType => throw _privateConstructorUsedError;
   bool get useContext => throw _privateConstructorUsedError;
   bool get showProgressBar => throw _privateConstructorUsedError;
   bool get closeOnClick => throw _privateConstructorUsedError;
@@ -44,14 +43,12 @@ mixin _$ToastDetail {
   bool get showIcon => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $ToastDetailCopyWith<ToastDetail> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ToastDetailCopyWith<ToastDetail> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ToastDetailCopyWith<$Res> {
-  factory $ToastDetailCopyWith(
-          ToastDetail value, $Res Function(ToastDetail) then) =
+  factory $ToastDetailCopyWith(ToastDetail value, $Res Function(ToastDetail) then) =
       _$ToastDetailCopyWithImpl<$Res, ToastDetail>;
   @useResult
   $Res call(
@@ -85,8 +82,7 @@ abstract class $ToastDetailCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ToastDetailCopyWithImpl<$Res, $Val extends ToastDetail>
-    implements $ToastDetailCopyWith<$Res> {
+class _$ToastDetailCopyWithImpl<$Res, $Val extends ToastDetail> implements $ToastDetailCopyWith<$Res> {
   _$ToastDetailCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -241,10 +237,8 @@ class _$ToastDetailCopyWithImpl<$Res, $Val extends ToastDetail>
 }
 
 /// @nodoc
-abstract class _$$ToastDetailImplCopyWith<$Res>
-    implements $ToastDetailCopyWith<$Res> {
-  factory _$$ToastDetailImplCopyWith(
-          _$ToastDetailImpl value, $Res Function(_$ToastDetailImpl) then) =
+abstract class _$$ToastDetailImplCopyWith<$Res> implements $ToastDetailCopyWith<$Res> {
+  factory _$$ToastDetailImplCopyWith(_$ToastDetailImpl value, $Res Function(_$ToastDetailImpl) then) =
       __$$ToastDetailImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -280,11 +274,9 @@ abstract class _$$ToastDetailImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ToastDetailImplCopyWithImpl<$Res>
-    extends _$ToastDetailCopyWithImpl<$Res, _$ToastDetailImpl>
+class __$$ToastDetailImplCopyWithImpl<$Res> extends _$ToastDetailCopyWithImpl<$Res, _$ToastDetailImpl>
     implements _$$ToastDetailImplCopyWith<$Res> {
-  __$$ToastDetailImplCopyWithImpl(
-      _$ToastDetailImpl _value, $Res Function(_$ToastDetailImpl) _then)
+  __$$ToastDetailImplCopyWithImpl(_$ToastDetailImpl _value, $Res Function(_$ToastDetailImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -530,49 +522,30 @@ class _$ToastDetailImpl implements _ToastDetail {
             other is _$ToastDetailImpl &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.style, style) || other.style == style) &&
-            (identical(other.alignment, alignment) ||
-                other.alignment == alignment) &&
+            (identical(other.alignment, alignment) || other.alignment == alignment) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
+            (identical(other.description, description) || other.description == description) &&
             (identical(other.icon, icon) || other.icon == icon) &&
-            (identical(other.primaryColor, primaryColor) ||
-                other.primaryColor == primaryColor) &&
-            (identical(other.backgroundColor, backgroundColor) ||
-                other.backgroundColor == backgroundColor) &&
-            (identical(other.foregroundColor, foregroundColor) ||
-                other.foregroundColor == foregroundColor) &&
-            (identical(other.iconColor, iconColor) ||
-                other.iconColor == iconColor) &&
-            (identical(other.borderRadius, borderRadius) ||
-                other.borderRadius == borderRadius) &&
-            (identical(other.borderSide, borderSide) ||
-                other.borderSide == borderSide) &&
+            (identical(other.primaryColor, primaryColor) || other.primaryColor == primaryColor) &&
+            (identical(other.backgroundColor, backgroundColor) || other.backgroundColor == backgroundColor) &&
+            (identical(other.foregroundColor, foregroundColor) || other.foregroundColor == foregroundColor) &&
+            (identical(other.iconColor, iconColor) || other.iconColor == iconColor) &&
+            (identical(other.borderRadius, borderRadius) || other.borderRadius == borderRadius) &&
+            (identical(other.borderSide, borderSide) || other.borderSide == borderSide) &&
             (identical(other.shadow, shadow) || other.shadow == shadow) &&
-            (identical(other.direction, direction) ||
-                other.direction == direction) &&
-            (identical(other.autoCloseDuration, autoCloseDuration) ||
-                other.autoCloseDuration == autoCloseDuration) &&
-            (identical(other.animationDuration, animationDuration) ||
-                other.animationDuration == animationDuration) &&
-            (identical(other.animationType, animationType) ||
-                other.animationType == animationType) &&
+            (identical(other.direction, direction) || other.direction == direction) &&
+            (identical(other.autoCloseDuration, autoCloseDuration) || other.autoCloseDuration == autoCloseDuration) &&
+            (identical(other.animationDuration, animationDuration) || other.animationDuration == animationDuration) &&
+            (identical(other.animationType, animationType) || other.animationType == animationType) &&
             (identical(other.closeButtonShowType, closeButtonShowType) ||
                 other.closeButtonShowType == closeButtonShowType) &&
-            (identical(other.useContext, useContext) ||
-                other.useContext == useContext) &&
-            (identical(other.showProgressBar, showProgressBar) ||
-                other.showProgressBar == showProgressBar) &&
-            (identical(other.closeOnClick, closeOnClick) ||
-                other.closeOnClick == closeOnClick) &&
-            (identical(other.pauseOnHover, pauseOnHover) ||
-                other.pauseOnHover == pauseOnHover) &&
-            (identical(other.dragToClose, dragToClose) ||
-                other.dragToClose == dragToClose) &&
-            (identical(other.applyBlurEffect, applyBlurEffect) ||
-                other.applyBlurEffect == applyBlurEffect) &&
-            (identical(other.showIcon, showIcon) ||
-                other.showIcon == showIcon));
+            (identical(other.useContext, useContext) || other.useContext == useContext) &&
+            (identical(other.showProgressBar, showProgressBar) || other.showProgressBar == showProgressBar) &&
+            (identical(other.closeOnClick, closeOnClick) || other.closeOnClick == closeOnClick) &&
+            (identical(other.pauseOnHover, pauseOnHover) || other.pauseOnHover == pauseOnHover) &&
+            (identical(other.dragToClose, dragToClose) || other.dragToClose == dragToClose) &&
+            (identical(other.applyBlurEffect, applyBlurEffect) || other.applyBlurEffect == applyBlurEffect) &&
+            (identical(other.showIcon, showIcon) || other.showIcon == showIcon));
   }
 
   @override
@@ -692,6 +665,5 @@ abstract class _ToastDetail implements ToastDetail {
   bool get showIcon;
   @override
   @JsonKey(ignore: true)
-  _$$ToastDetailImplCopyWith<_$ToastDetailImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ToastDetailImplCopyWith<_$ToastDetailImpl> get copyWith => throw _privateConstructorUsedError;
 }

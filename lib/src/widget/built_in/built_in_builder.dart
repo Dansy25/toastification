@@ -138,9 +138,7 @@ class BuiltInBuilder extends StatelessWidget {
 
   VoidCallback _onCloseButtonTap() {
     return () {
-      callbacks.onCloseButtonTap != null
-          ? callbacks.onCloseButtonTap?.call(item)
-          : _defaultCloseButtonTap();
+      callbacks.onCloseButtonTap != null ? callbacks.onCloseButtonTap?.call(item) : _defaultCloseButtonTap();
     };
   }
 
@@ -239,8 +237,7 @@ class BuiltInToastBuilder extends StatelessWidget {
     return OnHoverShow(
       enabled: closeButtonType == CloseButtonShowType.onHover,
       childBuilder: (context, showWidget) {
-        final showCloseButton =
-            (closeButtonType != CloseButtonShowType.none) && showWidget;
+        final showCloseButton = (closeButtonType != CloseButtonShowType.none) && showWidget;
 
         return switch (style) {
           ToastificationStyle.flat => FlatToastWidget(
@@ -355,8 +352,7 @@ class BuiltInToastBuilder extends StatelessWidget {
 
     if (color is MaterialColor) return color;
 
-    final findInMaterialColors = Colors.primaries
-        .firstWhereOrNull((element) => element.shade500 == color);
+    final findInMaterialColors = Colors.primaries.firstWhereOrNull((element) => element.shade500 == color);
 
     return findInMaterialColors ?? ToastHelper.createMaterialColor(color);
   }

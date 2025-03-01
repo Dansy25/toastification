@@ -121,8 +121,7 @@ class IconPickerWidget extends ConsumerWidget {
               decoration: const InputDecoration(
                 hintText: "Search",
               ),
-              onChanged: (value) =>
-                  ref.read(searchedIconQuery.notifier).state = value,
+              onChanged: (value) => ref.read(searchedIconQuery.notifier).state = value,
             ),
             const SizedBox(
               height: 10,

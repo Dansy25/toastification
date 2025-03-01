@@ -23,8 +23,7 @@ final class ToastHolderWidget extends StatelessWidget {
     return KeyedSubtree(
       key: ValueKey(item.id),
       child: DefaultTextStyle(
-        style: Theme.of(context).textTheme.bodyLarge ??
-            ThemeData.light().textTheme.bodyLarge!,
+        style: Theme.of(context).textTheme.bodyLarge ?? ThemeData.light().textTheme.bodyLarge!,
         child: _AnimationTransformer(
           animation: animation,
           alignment: alignment,

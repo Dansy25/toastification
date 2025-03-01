@@ -38,8 +38,7 @@ class BorderedDropDown<T> extends StatelessWidget {
           prefixIcon: icon == null
               ? null
               : Padding(
-                  padding:
-                      const EdgeInsetsDirectional.symmetric(horizontal: 12),
+                  padding: const EdgeInsetsDirectional.symmetric(horizontal: 12),
                   child: icon,
                 ),
           prefixIconColor: theme.colorScheme.onSurface.withOpacity(.2),

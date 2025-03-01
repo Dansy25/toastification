@@ -14,9 +14,7 @@ class ContentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return !context.isInMobileZone
-        ? const _ContentDesktop()
-        : const _ContentMobile();
+    return !context.isInMobileZone ? const _ContentDesktop() : const _ContentMobile();
   }
 }
 
@@ -24,8 +22,7 @@ class _ContentDesktop extends ConsumerWidget {
   const _ContentDesktop();
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final textDirection = ref.watch(toastDetailControllerProvider).direction ??
-        Directionality.of(context);
+    final textDirection = ref.watch(toastDetailControllerProvider).direction ?? Directionality.of(context);
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,9 +52,7 @@ class _ContentDesktop extends ConsumerWidget {
                 elevation: 0,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 onTap: () {
-                  ref
-                      .read(toastDetailControllerProvider.notifier)
-                      .changeDirection(TextDirection.ltr);
+                  ref.read(toastDetailControllerProvider.notifier).changeDirection(TextDirection.ltr);
                 },
                 active: textDirection == TextDirection.ltr,
                 child: Row(
@@ -76,9 +71,7 @@ class _ContentDesktop extends ConsumerWidget {
                 elevation: 0,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 onTap: () {
-                  ref
-                      .read(toastDetailControllerProvider.notifier)
-                      .changeDirection(TextDirection.rtl);
+                  ref.read(toastDetailControllerProvider.notifier).changeDirection(TextDirection.rtl);
                 },
                 active: textDirection == TextDirection.rtl,
                 child: Row(
@@ -107,9 +100,7 @@ class _ContentDesktop extends ConsumerWidget {
                       value: ref.watch(toastDetailControllerProvider).showIcon,
                       soon: false,
                       onChanged: (value) {
-                        ref
-                            .read(toastDetailControllerProvider.notifier)
-                            .changeShowIcon(value ?? true);
+                        ref.read(toastDetailControllerProvider.notifier).changeShowIcon(value ?? true);
                       },
                     ),
                   ),
@@ -128,9 +119,7 @@ class _ContentDesktop extends ConsumerWidget {
                           hintText: 'Type the title text here..',
                         ),
                         onChanged: (value) {
-                          ref
-                              .read(toastDetailControllerProvider.notifier)
-                              .changeTitle(value);
+                          ref.read(toastDetailControllerProvider.notifier).changeTitle(value);
                         },
                       ),
                     ),
@@ -148,9 +137,7 @@ class _ContentDesktop extends ConsumerWidget {
                     hintText: 'Type the body text here..',
                   ),
                   onChanged: (value) {
-                    ref
-                        .read(toastDetailControllerProvider.notifier)
-                        .changeDescription(value);
+                    ref.read(toastDetailControllerProvider.notifier).changeDescription(value);
                   },
                 ),
               ),
@@ -167,8 +154,7 @@ class _ContentMobile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final textDirection = ref.watch(toastDetailControllerProvider).direction ??
-        Directionality.of(context);
+    final textDirection = ref.watch(toastDetailControllerProvider).direction ?? Directionality.of(context);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -211,9 +197,7 @@ class _ContentMobile extends ConsumerWidget {
           value: ref.watch(toastDetailControllerProvider).showIcon,
           soon: false,
           onChanged: (value) {
-            ref
-                .read(toastDetailControllerProvider.notifier)
-                .changeShowIcon(value ?? true);
+            ref.read(toastDetailControllerProvider.notifier).changeShowIcon(value ?? true);
           },
         ),
         const SizedBox(height: 16),
@@ -236,9 +220,7 @@ class _ContentMobile extends ConsumerWidget {
               hintText: 'Type the body text here..',
             ),
             onChanged: (value) {
-              ref
-                  .read(toastDetailControllerProvider.notifier)
-                  .changeDescription(value);
+              ref.read(toastDetailControllerProvider.notifier).changeDescription(value);
             },
           ),
         ),
@@ -252,9 +234,7 @@ class _ContentMobile extends ConsumerWidget {
                 elevation: 0,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 onTap: () {
-                  ref
-                      .read(toastDetailControllerProvider.notifier)
-                      .changeDirection(TextDirection.ltr);
+                  ref.read(toastDetailControllerProvider.notifier).changeDirection(TextDirection.ltr);
                 },
                 active: textDirection == TextDirection.ltr,
                 child: Row(
@@ -275,9 +255,7 @@ class _ContentMobile extends ConsumerWidget {
                 elevation: 0,
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 onTap: () {
-                  ref
-                      .read(toastDetailControllerProvider.notifier)
-                      .changeDirection(TextDirection.rtl);
+                  ref.read(toastDetailControllerProvider.notifier).changeDirection(TextDirection.rtl);
                 },
                 active: textDirection == TextDirection.rtl,
                 child: Row(

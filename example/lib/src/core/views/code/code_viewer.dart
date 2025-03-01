@@ -50,8 +50,7 @@ class CodeViewer extends StatelessWidget {
             : TextSpan(text: node.value, style: theme[node.className!]));
       } else if (node.children != null) {
         List<TextSpan> tmp = [];
-        currentSpans
-            .add(TextSpan(children: tmp, style: theme[node.className!]));
+        currentSpans.add(TextSpan(children: tmp, style: theme[node.className!]));
         stack.add(currentSpans);
         currentSpans = tmp;
 
@@ -97,8 +96,7 @@ class CodeViewer extends StatelessWidget {
         child: Text.rich(
           TextSpan(
             style: style,
-            children:
-                _convert(highlight.parse(content, language: language).nodes!),
+            children: _convert(highlight.parse(content, language: language).nodes!),
           ),
         ),
       ),
@@ -107,13 +105,11 @@ class CodeViewer extends StatelessWidget {
 }
 
 const defaultTheme = {
-  'root':
-      TextStyle(color: Color(0xff333333), backgroundColor: Color(0xfff8f8f8)),
+  'root': TextStyle(color: Color(0xff333333), backgroundColor: Color(0xfff8f8f8)),
   'comment': TextStyle(color: Color(0xff999988), fontStyle: FontStyle.italic),
   'quote': TextStyle(color: Color(0xff999988), fontStyle: FontStyle.italic),
   'keyword': TextStyle(color: Color(0xff008080), fontWeight: FontWeight.bold),
-  'selector-tag':
-      TextStyle(color: Color(0xff333333), fontWeight: FontWeight.bold),
+  'selector-tag': TextStyle(color: Color(0xff333333), fontWeight: FontWeight.bold),
   'subst': TextStyle(color: Color(0xff333333), fontWeight: FontWeight.normal),
   'number': TextStyle(color: Color(0xff008080)),
   'literal': TextStyle(color: Color(0xff008080)),
@@ -123,13 +119,11 @@ const defaultTheme = {
   'doctag': TextStyle(color: Color(0xffdd1144)),
   'title': TextStyle(color: Color(0xff990000), fontWeight: FontWeight.bold),
   'section': TextStyle(color: Color(0xff990000), fontWeight: FontWeight.bold),
-  'selector-id':
-      TextStyle(color: Color(0xff990000), fontWeight: FontWeight.bold),
+  'selector-id': TextStyle(color: Color(0xff990000), fontWeight: FontWeight.bold),
   'type': TextStyle(color: Color(0xff445588), fontWeight: FontWeight.bold),
   'tag': TextStyle(color: Color(0xff000080), fontWeight: FontWeight.normal),
   'name': TextStyle(color: Color(0xff000080), fontWeight: FontWeight.normal),
-  'attribute':
-      TextStyle(color: Color(0xff000080), fontWeight: FontWeight.normal),
+  'attribute': TextStyle(color: Color(0xff000080), fontWeight: FontWeight.normal),
   'regexp': TextStyle(color: Color(0xff009926)),
   'link': TextStyle(color: Color(0xff009926)),
   'symbol': TextStyle(color: Color(0xff990073)),

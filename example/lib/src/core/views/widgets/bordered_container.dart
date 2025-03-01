@@ -32,20 +32,15 @@ class BorderedContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    final background = active
-        ? theme.colorScheme.primary.withOpacity(.1)
-        : theme.colorScheme.surface;
+    final background = active ? theme.colorScheme.primary.withOpacity(.1) : theme.colorScheme.surface;
 
     final disableBackground = theme.colorScheme.onSurface.withOpacity(.05);
 
-    final foreground = active
-        ? theme.colorScheme.primary
-        : theme.colorScheme.onPrimaryContainer;
+    final foreground = active ? theme.colorScheme.primary : theme.colorScheme.onPrimaryContainer;
 
     final disableForeground = theme.colorScheme.onSurface.withOpacity(.35);
 
-    final borderColor =
-        active ? theme.colorScheme.primary : theme.colorScheme.outline;
+    final borderColor = active ? theme.colorScheme.primary : theme.colorScheme.outline;
 
     final disableBorderColor = theme.colorScheme.onSurface.withOpacity(.05);
 
@@ -130,16 +125,11 @@ class ShadowContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
-    final backgroundColor = active
-        ? theme.colorScheme.primary.withOpacity(.1)
-        : theme.colorScheme.surface;
+    final backgroundColor = active ? theme.colorScheme.primary.withOpacity(.1) : theme.colorScheme.surface;
 
-    final foreground = active
-        ? theme.colorScheme.primary
-        : theme.colorScheme.onPrimaryContainer;
+    final foreground = active ? theme.colorScheme.primary : theme.colorScheme.onPrimaryContainer;
 
-    final borderColor =
-        active ? theme.colorScheme.primary : theme.colorScheme.outline;
+    final borderColor = active ? theme.colorScheme.primary : theme.colorScheme.outline;
 
     final borderSize = active ? 1.5 : 1.0;
     return AnimatedContainer(

@@ -47,18 +47,14 @@ class RoundToggle extends StatelessWidget {
 
     bool enabled = onChanged != null;
 
-    final thumbColor = value
-        ? enabledThumbColor ?? theme.colorScheme.onPrimary
-        : disabledThumbColor ?? theme.colorScheme.onPrimary;
+    final thumbColor =
+        value ? enabledThumbColor ?? theme.colorScheme.onPrimary : disabledThumbColor ?? theme.colorScheme.onPrimary;
 
-    final thumbRadius =
-        this.thumbRadius ?? const BorderRadius.all(Radius.circular(6));
-    final backgroundRadius =
-        this.backgroundRadius ?? const BorderRadius.all(Radius.circular(8));
+    final thumbRadius = this.thumbRadius ?? const BorderRadius.all(Radius.circular(6));
+    final backgroundRadius = this.backgroundRadius ?? const BorderRadius.all(Radius.circular(8));
 
-    final backgroundColor = value && enabled
-        ? enabledTrackColor ?? theme.colorScheme.primary
-        : disabledTrackColor ?? theme.disabledColor;
+    final backgroundColor =
+        value && enabled ? enabledTrackColor ?? theme.colorScheme.primary : disabledTrackColor ?? theme.disabledColor;
 
     return InkWell(
       borderRadius: const BorderRadius.all(Radius.circular(8)),

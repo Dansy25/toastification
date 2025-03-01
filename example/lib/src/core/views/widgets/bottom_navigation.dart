@@ -9,12 +9,10 @@ class BottomNavigationView extends ConsumerStatefulWidget {
   const BottomNavigationView({super.key});
 
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() =>
-      _BottomNavigationViewState();
+  ConsumerState<ConsumerStatefulWidget> createState() => _BottomNavigationViewState();
 }
 
-class _BottomNavigationViewState extends ConsumerState<BottomNavigationView>
-    with SingleTickerProviderStateMixin {
+class _BottomNavigationViewState extends ConsumerState<BottomNavigationView> with SingleTickerProviderStateMixin {
   ScrollNotificationObserverState? _scrollNotificationObserver;
 
   late final AnimationController controller;

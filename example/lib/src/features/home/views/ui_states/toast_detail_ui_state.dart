@@ -8,12 +8,8 @@ part 'toast_detail_ui_state.freezed.dart';
 
 enum ShadowOptions {
   none(name: 'none', title: 'None', shadow: []),
-  lowMode(
-      name: 'lowModeShadow', title: 'Low mode shadow', shadow: lowModeShadow),
-  highMode(
-      name: 'highModeShadow',
-      title: 'High mode shadow',
-      shadow: highModeShadow);
+  lowMode(name: 'lowModeShadow', title: 'Low mode shadow', shadow: lowModeShadow),
+  highMode(name: 'highModeShadow', title: 'High mode shadow', shadow: highModeShadow);
 
   const ShadowOptions({
     required this.name,
@@ -46,8 +42,7 @@ class ToastDetail with _$ToastDetail {
     @Default(Duration(seconds: 4)) Duration? autoCloseDuration,
     Duration? animationDuration,
     @Default(BounceAnimationType()) AnimationType animationType,
-    @Default(CloseButtonShowType.always)
-    CloseButtonShowType closeButtonShowType,
+    @Default(CloseButtonShowType.always) CloseButtonShowType closeButtonShowType,
     @Default(true) bool useContext,
     @Default(false) bool showProgressBar,
     @Default(true) bool closeOnClick,

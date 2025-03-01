@@ -28,11 +28,9 @@ class ToastTypeTabBar extends ConsumerWidget {
 
     final gridCrossAxisCount = context.isInMobileZone ? 2 : itemsLength;
     final gridMainAxisCount = (itemsLength / gridCrossAxisCount).ceil();
-    final lastItemCountCell =
-        (gridCrossAxisCount * gridMainAxisCount) - itemsLength + 1;
+    final lastItemCountCell = (gridCrossAxisCount * gridMainAxisCount) - itemsLength + 1;
 
-    final gridHeight =
-        gridMainAxisCount * itemHeight + gridMainAxisCount + itemSpacing;
+    final gridHeight = gridMainAxisCount * itemHeight + gridMainAxisCount + itemSpacing;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,9 +60,7 @@ class ToastTypeTabBar extends ConsumerWidget {
                   title: 'Success',
                   color: successColor,
                   onTap: () {
-                    ref
-                        .read(toastDetailControllerProvider.notifier)
-                        .changeType(ToastificationType.success);
+                    ref.read(toastDetailControllerProvider.notifier).changeType(ToastificationType.success);
                   },
                   height: itemHeight,
                 ),
@@ -76,9 +72,7 @@ class ToastTypeTabBar extends ConsumerWidget {
                   title: 'Info',
                   color: infoColor,
                   onTap: () {
-                    ref
-                        .read(toastDetailControllerProvider.notifier)
-                        .changeType(ToastificationType.info);
+                    ref.read(toastDetailControllerProvider.notifier).changeType(ToastificationType.info);
                   },
                   height: itemHeight,
                 ),
@@ -90,9 +84,7 @@ class ToastTypeTabBar extends ConsumerWidget {
                   title: 'Warning',
                   color: warningColor,
                   onTap: () {
-                    ref
-                        .read(toastDetailControllerProvider.notifier)
-                        .changeType(ToastificationType.warning);
+                    ref.read(toastDetailControllerProvider.notifier).changeType(ToastificationType.warning);
                   },
                   height: itemHeight,
                 ),
@@ -104,9 +96,7 @@ class ToastTypeTabBar extends ConsumerWidget {
                   title: 'Error',
                   color: errorColor,
                   onTap: () {
-                    ref
-                        .read(toastDetailControllerProvider.notifier)
-                        .changeType(ToastificationType.error);
+                    ref.read(toastDetailControllerProvider.notifier).changeType(ToastificationType.error);
                   },
                   height: itemHeight,
                 ),

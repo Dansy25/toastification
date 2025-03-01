@@ -138,14 +138,12 @@ class _InformationWidget extends ConsumerWidget {
       padding: const EdgeInsets.symmetric(vertical: 42),
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment:
-            isRow ? CrossAxisAlignment.start : CrossAxisAlignment.center,
+        crossAxisAlignment: isRow ? CrossAxisAlignment.start : CrossAxisAlignment.center,
         children: [
           GestureDetector(
             onDoubleTap: () {
               // ref.read(_bigStyleProvider.notifier).state = !isBig;
-              ref.read(themeVariantProvider.notifier).state =
-                  !ref.read(themeVariantProvider);
+              ref.read(themeVariantProvider.notifier).state = !ref.read(themeVariantProvider);
             },
             child: const GithubStars(),
           ),
@@ -222,8 +220,7 @@ class AnimatedArrow extends StatefulWidget {
   AnimatedArrowState createState() => AnimatedArrowState();
 }
 
-class AnimatedArrowState extends State<AnimatedArrow>
-    with SingleTickerProviderStateMixin {
+class AnimatedArrowState extends State<AnimatedArrow> with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
 
   late final Animation<double> _animation;

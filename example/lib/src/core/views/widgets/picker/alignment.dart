@@ -2,16 +2,14 @@ import 'package:example/src/core/views/widgets/bordered_container.dart';
 import 'package:flutter/material.dart';
 
 class AlignmentPicker extends StatelessWidget {
-  const AlignmentPicker(
-      {super.key, required this.selectedAlignment, this.onChanged});
+  const AlignmentPicker({super.key, required this.selectedAlignment, this.onChanged});
 
   final AlignmentGeometry selectedAlignment;
   final ValueChanged<Alignment>? onChanged;
 
   @override
   Widget build(BuildContext context) {
-    final selectedAlignment =
-        this.selectedAlignment.resolve(Directionality.of(context));
+    final selectedAlignment = this.selectedAlignment.resolve(Directionality.of(context));
 
     final theme = Theme.of(context);
     return Container(
@@ -40,9 +38,7 @@ class AlignmentPicker extends StatelessWidget {
                   onTap: () {
                     onChanged?.call(Alignment.topLeft);
                   },
-                  child: selectedAlignment == Alignment.topLeft
-                      ? const Icon(Icons.check)
-                      : null,
+                  child: selectedAlignment == Alignment.topLeft ? const Icon(Icons.check) : null,
                 ),
               ),
               TableCell(
@@ -57,9 +53,7 @@ class AlignmentPicker extends StatelessWidget {
                   onTap: () {
                     onChanged?.call(Alignment.topCenter);
                   },
-                  child: selectedAlignment == Alignment.topCenter
-                      ? const Icon(Icons.check)
-                      : null,
+                  child: selectedAlignment == Alignment.topCenter ? const Icon(Icons.check) : null,
                 ),
               ),
               TableCell(
@@ -74,9 +68,7 @@ class AlignmentPicker extends StatelessWidget {
                   onTap: () {
                     onChanged?.call(Alignment.topRight);
                   },
-                  child: selectedAlignment == Alignment.topRight
-                      ? const Icon(Icons.check)
-                      : null,
+                  child: selectedAlignment == Alignment.topRight ? const Icon(Icons.check) : null,
                 ),
               ),
             ],
@@ -95,9 +87,7 @@ class AlignmentPicker extends StatelessWidget {
                   onTap: () {
                     onChanged?.call(Alignment.centerLeft);
                   },
-                  child: selectedAlignment == Alignment.centerLeft
-                      ? const Icon(Icons.check)
-                      : null,
+                  child: selectedAlignment == Alignment.centerLeft ? const Icon(Icons.check) : null,
                 ),
               ),
               TableCell(
@@ -112,9 +102,7 @@ class AlignmentPicker extends StatelessWidget {
                   onTap: () {
                     onChanged?.call(Alignment.center);
                   },
-                  child: selectedAlignment == Alignment.center
-                      ? const Icon(Icons.check)
-                      : null,
+                  child: selectedAlignment == Alignment.center ? const Icon(Icons.check) : null,
                 ),
               ),
               TableCell(
@@ -129,9 +117,7 @@ class AlignmentPicker extends StatelessWidget {
                   onTap: () {
                     onChanged?.call(Alignment.centerRight);
                   },
-                  child: selectedAlignment == Alignment.centerRight
-                      ? const Icon(Icons.check)
-                      : null,
+                  child: selectedAlignment == Alignment.centerRight ? const Icon(Icons.check) : null,
                 ),
               ),
             ],
@@ -150,9 +136,7 @@ class AlignmentPicker extends StatelessWidget {
                   onTap: () {
                     onChanged?.call(Alignment.bottomLeft);
                   },
-                  child: selectedAlignment == Alignment.bottomLeft
-                      ? const Icon(Icons.check)
-                      : null,
+                  child: selectedAlignment == Alignment.bottomLeft ? const Icon(Icons.check) : null,
                 ),
               ),
               TableCell(
@@ -167,9 +151,7 @@ class AlignmentPicker extends StatelessWidget {
                   onTap: () {
                     onChanged?.call(Alignment.bottomCenter);
                   },
-                  child: selectedAlignment == Alignment.bottomCenter
-                      ? const Icon(Icons.check)
-                      : null,
+                  child: selectedAlignment == Alignment.bottomCenter ? const Icon(Icons.check) : null,
                 ),
               ),
               TableCell(
@@ -184,9 +166,7 @@ class AlignmentPicker extends StatelessWidget {
                   onTap: () {
                     onChanged?.call(Alignment.bottomRight);
                   },
-                  child: selectedAlignment == Alignment.bottomRight
-                      ? const Icon(Icons.check)
-                      : null,
+                  child: selectedAlignment == Alignment.bottomRight ? const Icon(Icons.check) : null,
                 ),
               ),
             ],

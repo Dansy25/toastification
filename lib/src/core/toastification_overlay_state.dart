@@ -5,8 +5,7 @@ import 'package:toastification/src/core/toastification_config.dart';
 import 'package:toastification/src/widget/toastification_config_provider.dart';
 
 /// Key used to locate the [ToastificationOverlayState].
-final GlobalKey<ToastificationOverlayState> _keyFinder =
-    GlobalKey(debugLabel: 'toastification_overlay');
+final GlobalKey<ToastificationOverlayState> _keyFinder = GlobalKey(debugLabel: 'toastification_overlay');
 
 /// This method is responsible for finding [ToastificationOverlayState] with
 /// the GlobalKey that is assigned to [_GlobalToastificationOverlay].
@@ -61,9 +60,7 @@ class ToastificationWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ToastificationConfigProvider(
-      config: config ??
-          ToastificationConfigProvider.maybeOf(context)?.config ??
-          const ToastificationConfig(),
+      config: config ?? ToastificationConfigProvider.maybeOf(context)?.config ?? const ToastificationConfig(),
       child: _GlobalToastificationOverlay(child: child),
     );
   }
@@ -84,18 +81,14 @@ class _GlobalToastificationOverlay extends StatefulWidget {
   }
 
   @override
-  _GlobalToastificationOverlayState createState() =>
-      _GlobalToastificationOverlayState();
+  _GlobalToastificationOverlayState createState() => _GlobalToastificationOverlayState();
 }
 
-class _GlobalToastificationOverlayState
-    extends ToastificationOverlayState<_GlobalToastificationOverlay> {
+class _GlobalToastificationOverlayState extends ToastificationOverlayState<_GlobalToastificationOverlay> {
   @override
   Widget build(BuildContext context) {
     assert(() {
-      if (context
-              .findAncestorWidgetOfExactType<_GlobalToastificationOverlay>() !=
-          null) {
+      if (context.findAncestorWidgetOfExactType<_GlobalToastificationOverlay>() != null) {
         throw FlutterError(
           'There is already a ToastificationWrapper in the widget tree.',
         );
@@ -143,13 +136,11 @@ Did you wrapped your app widget like this?
   }
 
   @override
-  ToastificationConfig? get globalConfig =>
-      ToastificationConfigProvider.maybeOf(context)?.config;
+  ToastificationConfig? get globalConfig => ToastificationConfigProvider.maybeOf(context)?.config;
 }
 
 /// Abstract class representing the state of a Toastification overlay.
-abstract class ToastificationOverlayState<T extends StatefulWidget>
-    extends State<T> {
+abstract class ToastificationOverlayState<T extends StatefulWidget> extends State<T> {
   /// Retrieves the overlay state.
   OverlayState? get overlayState;
 

@@ -22,8 +22,7 @@ class ElevationPicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final selectedElevation =
-        this.selectedElevation ?? elevationValues.values.first;
+    final selectedElevation = this.selectedElevation ?? elevationValues.values.first;
 
     return ResponsiveRowColumn(
       rowSpacing: 10,
