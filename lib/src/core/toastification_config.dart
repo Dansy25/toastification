@@ -28,6 +28,9 @@ class ToastificationConfig extends Equatable {
     this.animationBuilder = _defaultAnimationBuilderConfig,
     this.marginBuilder = _defaultMarginBuilder,
     this.applyMediaQueryViewInsets = true,
+    this.maxToastLimit = 2,
+    this.maxTitleLines = 2,
+    this.maxDescriptionLines = 6,
   });
 
   final AlignmentGeometry alignment;
@@ -44,6 +47,21 @@ class ToastificationConfig extends Equatable {
   /// Builder method for creating margin for Toastification Overlay.
   final ToastificationMarginBuilder marginBuilder;
 
+  /// The maximum number of toasts that can be displayed at the same time.
+  /// If the number of toasts exceeds this limit, the oldest toast will be removed.
+  /// The default value is 10.
+  final int maxToastLimit;
+
+  /// The maximum number of lines to display for the toast title.
+  /// If the title exceeds this number of lines, it will be truncated with an ellipsis.
+  /// The default value is 2.
+  final int maxTitleLines;
+
+  /// The maximum number of lines to display for the toast description.
+  /// If the description exceeds this number of lines, it will be truncated with an ellipsis.
+  /// The default value is 2.
+  final int maxDescriptionLines;
+
   /// Whether to apply the viewInsets to the margin of the Toastification Overlay.
   /// Basically, this is used to move the Toastification Overlay up or down when the keyboard is shown.
   /// So Toast overlay will not be hidden by the keyboard when the keyboard is shown.
@@ -59,6 +77,7 @@ class ToastificationConfig extends Equatable {
     Duration? animationDuration,
     ToastificationAnimationBuilder? animationBuilder,
     ToastificationMarginBuilder? marginBuilder,
+    int? maxToastLimit,
     bool? applyMediaQueryViewInsets,
   }) {
     return ToastificationConfig(
@@ -68,6 +87,7 @@ class ToastificationConfig extends Equatable {
       animationDuration: animationDuration ?? this.animationDuration,
       animationBuilder: animationBuilder ?? this.animationBuilder,
       marginBuilder: marginBuilder ?? this.marginBuilder,
+      maxToastLimit: maxToastLimit ?? this.maxToastLimit,
       applyMediaQueryViewInsets: applyMediaQueryViewInsets ?? this.applyMediaQueryViewInsets,
     );
   }
@@ -79,6 +99,9 @@ class ToastificationConfig extends Equatable {
         clipBehavior,
         animationDuration,
         marginBuilder,
+        maxToastLimit,
+        maxTitleLines,
+        maxDescriptionLines,
         applyMediaQueryViewInsets,
       ];
 }
